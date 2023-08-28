@@ -62,7 +62,7 @@ const Page = () => {
           </span>
         </div>
         {!showResult ? (
-          <div className="bg-white w-[500px] h-[300px] rounded-md px-6">
+          <div className="bg-[#2c5341] w-[500px] h-[300px] rounded-md px-6 text-white">
             <h2 className="font-bold text-center p-2">
               {questions[activeQuestion].question}
             </h2>
@@ -72,8 +72,8 @@ const Page = () => {
                 onClick={() => onAnswerSelected(answer, idx)}
                 className={
                   selectedAnswerIndex === idx
-                    ? "bg-green-300 p-2 border border-green-300 mb-3 cursor-pointer"
-                    : "hover:bg-gray-300 p-2 border border-gray-300 mb-3 cursor-pointer"
+                    ? "bg-green-300 p-2 border text-black border-green-300 mb-3 cursor-pointer"
+                    : "hover:bg-gray-800 p-2 border border-gray-300 mb-3 cursor-pointer"
                 }
               >
                 <span className="">{answer}</span>
@@ -81,7 +81,7 @@ const Page = () => {
             ))}
             {checked ? (
               <button
-                className="bg-gray-300 py-1.5 font-bold tracking-wider w-full rounded-md"
+                className="bg-[#0e3825] py-1.5 font-bold tracking-wider w-full rounded-md"
                 onClick={nextQuestion}
               >
                 {activeQuestion === question.length - 1 ? "Bitti" : "İleri"}
@@ -89,7 +89,7 @@ const Page = () => {
             ) : (
               <button
                 onClick={nextQuestion}
-                className="bg-gray-200 py-1.5 font-bold tracking-wider w-full rounded-md"
+                className="bg-[#203d30] py-1.5 font-bold tracking-wider w-full rounded-md"
                 disabled
               >
                 {activeQuestion === question.length - 1 ? "Bitti" : "İleri"}
@@ -97,12 +97,12 @@ const Page = () => {
             )}
           </div>
         ) : (
-          <div className="bg-white w-[500px] h-[200px] rounded-md flex flex-col items-center justify-center gap-1">
+          <div className="bg-[#0e3825] w-[500px] h-[200px] rounded-md flex flex-col items-center justify-center gap-1 text-white">
             <h3 className="p-1 border px-10 rounded-md border-gray-300">Doğru <span className="text-green-600">{result.correctAnswers}</span></h3>
             <h2 className="p-1 border px-10 rounded-md border-gray-300">Yanlış <span className="text-red-600">{result.wrongAnswers}</span></h2>
             <h1 className="p-1 border px-10 rounded-md border-gray-300">Puan <b>{(result.score / 25) * 100}</b>%</h1>
             <h4 className="p-1 border px-10 rounded-md border-gray-300">Toplam Puan <b>{result.score}</b></h4>
-            <button onClick={() => window.location.reload()} className="bg-gray-300 py-1.5 font-bold tracking-wider w-full rounded-md">
+            <button onClick={() => window.location.reload()} className="bg-[#22473e] py-1.5 font-bold tracking-wider w-full rounded-md">
               Baştan başla
             </button>
           </div>
