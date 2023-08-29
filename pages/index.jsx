@@ -7,10 +7,10 @@ export default function Home() {
       <Header />
       <div className="flex justify-center py-10 items-center">
         <div className="flex flex-col items-center gap-2 text-center">
-          <h1 className="text-white text-2xl">
+          <h1 className="text-white md:text-2xl text-sm w-[250px] md:w-full">
             Merhaba online quix uygulamasına hoşgeldin
           </h1>
-          <p className="text-white w-[380px] text-sm">
+          <p className="text-white md:w-[380px] text-sm">
             Burada kendini test edip bildiklerini pekiştirebilirsin başarılar
             dileriz
           </p>
@@ -19,7 +19,11 @@ export default function Home() {
               <h1 className="text-white font-bold tracking-wider">
                 Seviye Seç
               </h1>
-              <select name="" id="" className="outline-none bg-[#2d554e] p-1 text-white">
+              <select
+                name=""
+                id=""
+                className="outline-none bg-[#2d554e] p-1 text-white"
+              >
                 <option value="zor">Zor</option>
                 <option value="orta">Orta</option>
                 <option value="normal">Normal</option>
@@ -30,7 +34,11 @@ export default function Home() {
               <h1 className="text-white font-bold tracking-wider">
                 İçerik Seç
               </h1>
-              <select name="" id="" className="outline-none bg-[#2d554e] p-1 text-white">
+              <select
+                name=""
+                id=""
+                className="outline-none bg-[#2d554e] p-1 text-white"
+              >
                 <option value="js">JS</option>
                 <option value="react">React</option>
                 <option value="next">NextJS</option>

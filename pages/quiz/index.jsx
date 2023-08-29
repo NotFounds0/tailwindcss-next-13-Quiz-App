@@ -62,7 +62,7 @@ const Page = () => {
           </span>
         </div>
         {!showResult ? (
-          <div className="bg-[#2c5341] w-[500px] h-[300px] rounded-md px-6 text-white">
+          <div className="bg-[#2c5341] md:w-[500px] w-full md:h-[300px] py-3 md:py-0 rounded-md px-6 text-white">
             <h2 className="font-bold text-center p-2">
               {questions[activeQuestion].question}
             </h2>
@@ -97,7 +97,7 @@ const Page = () => {
             )}
           </div>
         ) : (
-          <div className="bg-[#0e3825] w-[500px] h-[200px] rounded-md flex flex-col items-center justify-center gap-1 text-white">
+          <div className="bg-[#0e3825] md:w-[500px] w-full h-[200px] rounded-md flex flex-col items-center justify-center gap-1 text-white">
             <h3 className="p-1 border px-10 rounded-md border-gray-300">Doğru <span className="text-green-600">{result.correctAnswers}</span></h3>
             <h2 className="p-1 border px-10 rounded-md border-gray-300">Yanlış <span className="text-red-600">{result.wrongAnswers}</span></h2>
             <h1 className="p-1 border px-10 rounded-md border-gray-300">Puan <b>{(result.score / 25) * 100}</b>%</h1>
